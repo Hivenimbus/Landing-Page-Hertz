@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\Caiol\\OneDrive\\Documentos\\Landing-Page-Hertz\\server\")",
+      "Bash(dir \"C:\\Users\\Caiol\\OneDrive\\Documentos\\Landing-Page-Hertz\\supabase\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
