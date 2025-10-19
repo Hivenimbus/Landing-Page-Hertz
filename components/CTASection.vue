@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-xl">
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
         Pronto para <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transformar?</span>
