@@ -47,7 +47,7 @@
                :class="index % 2 === 0 ? 'lg:pr-[55%]' : 'lg:pl-[55%]'">
             
             <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-16 h-16 z-20"
-                 :class="isVisible[index] ? 'animate-dot-pulse' : 'opacity-0'"
+                 :class="isVisible[index] ? 'animate-dot-pulse' : ''"
                  :style="{ animationDelay: (index * 0.15) + 's' }">
               <div class="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 animate-spin-slow opacity-20"></div>
               <div class="absolute inset-2 rounded-full bg-gray-900 border-2 border-green-500"></div>
@@ -59,7 +59,7 @@
             <div class="progression-card group"
                  :class="[
                    index % 2 === 0 ? 'lg:text-right' : 'lg:text-left',
-                   isVisible[index] ? (index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right') : 'opacity-0'
+                   isVisible[index] ? (index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right') : ''
                  ]"
                  :style="{ animationDelay: (index * 0.15) + 's' }">
               
@@ -72,7 +72,7 @@
                   <div class="flex items-center mb-6"
                        :class="index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'">
                     <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300"
-                         :class="isVisible[index] ? 'animate-icon-pop' : 'opacity-0'"
+                         :class="isVisible[index] ? 'animate-icon-pop' : ''"
                          :style="{ animationDelay: (index * 0.15 + 0.3) + 's' }">
                       <component :is="step.icon" class="w-7 h-7 text-white" />
                     </div>
@@ -354,11 +354,11 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
 }
 
 .animate-slide-in-left {
-  animation: slideInFromLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: slideInFromLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .animate-slide-in-right {
-  animation: slideInFromRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: slideInFromRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 @keyframes slideInFromLeft {
@@ -414,7 +414,7 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
 }
 
 .animate-icon-pop {
-  animation: iconPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: iconPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 }
 
 @keyframes dotPulse {
@@ -432,7 +432,11 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
 }
 
 .animate-dot-pulse {
-  animation: dotPulse 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: dotPulse 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.progression-card:not(.animate-slide-in-left):not(.animate-slide-in-right) {
+  opacity: 0;
 }
 
 .progression-card {
