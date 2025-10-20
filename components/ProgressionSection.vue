@@ -44,9 +44,11 @@
                :key="index"
                :ref="el => stepRefs[index] = el"
                class="relative"
-               :class="index % 2 === 0 ? 'lg:pr-[52%]' : 'lg:pl-[52%]'">
+               :class="index % 2 === 0 ? 'lg:pr-[55%]' : 'lg:pl-[55%]'">
             
-            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-16 h-16 z-20">
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-16 h-16 z-20"
+                 :class="isVisible[index] ? 'animate-dot-pulse' : 'opacity-0'"
+                 :style="{ animationDelay: (index * 0.15) + 's' }">
               <div class="absolute inset-0 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 animate-spin-slow opacity-20"></div>
               <div class="absolute inset-2 rounded-full bg-gray-900 border-2 border-green-500"></div>
               <div class="relative z-10 w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/50">
@@ -57,9 +59,9 @@
             <div class="progression-card group"
                  :class="[
                    index % 2 === 0 ? 'lg:text-right' : 'lg:text-left',
-                   isVisible[index] ? 'animate-slide-in' : 'opacity-0'
+                   isVisible[index] ? (index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right') : 'opacity-0'
                  ]"
-                 :style="{ animationDelay: '0.2s' }">
+                 :style="{ animationDelay: (index * 0.15) + 's' }">
               
               <div class="relative p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 transform hover:-translate-y-2">
                 <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/0 to-emerald-500/0 group-hover:from-green-500/10 group-hover:to-emerald-500/5 transition-all duration-500"></div>
@@ -69,7 +71,9 @@
                 <div class="relative">
                   <div class="flex items-center mb-6"
                        :class="index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'">
-                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300"
+                         :class="isVisible[index] ? 'animate-icon-pop' : 'opacity-0'"
+                         :style="{ animationDelay: (index * 0.15 + 0.3) + 's' }">
                       <component :is="step.icon" class="w-7 h-7 text-white" />
                     </div>
                   </div>
@@ -334,6 +338,10 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
   animation: slideIn 0.8s ease-out forwards;
 }
 
+.progression-card {
+  transition: all 0.3s ease-out;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -343,6 +351,88 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px) scale(0.8) rotate(-5deg);
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  80% {
+    transform: translateX(10px) scale(1.02) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) scale(0.8) rotate(5deg);
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  80% {
+    transform: translateX(-10px) scale(1.02) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-icon-pop {
+  animation: iconPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes dotPulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.animate-dot-pulse {
+  animation: dotPulse 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .progression-card {
