@@ -1,6 +1,7 @@
 <template>
   <div class="relative">
     <HeroSection />
+    <ProgressionSection />
     <FeaturesSection />
     <AboutSection />
     <CTASection />
