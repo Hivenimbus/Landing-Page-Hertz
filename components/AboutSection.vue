@@ -4,10 +4,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
           <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-            Estamos <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Moldando</span> o Futuro
+            Conheça o Grupo <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Prosperity</span>
           </h2>
           <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-            Na Hertz, combinamos tecnologia de ponta com design inovador para criar soluções que transformam radicalmente a maneira como você trabalha. Nossa plataforma é construída sobre os princípios de eficiência, segurança e escalabilidade.
+            No Prosperity, oferecemos acesso exclusivo a métodos comprovados de ganho de dinheiro com 0 risco. Nossa comunidade tem acesso a plataformas proprietárias e suporte especializado para garantir sua liberdade financeira.
           </p>
 
           <div class="space-y-6">
@@ -56,24 +56,24 @@
 <script setup>
 const aboutItems = [
   {
-    title: 'Tecnologia de Ponta',
-    description: 'Utilizando as mais recentes inovações do mercado.'
+    title: 'Métodos 0 Risco',
+    description: 'Estratégias comprovadas que eliminam completamente o risco financeiro.'
   },
   {
-    title: 'Performance Excepcional',
-    description: 'Velocidade e confiabilidade garantidas.'
+    title: 'Plataformas Exclusivas',
+    description: 'Acesso VIP ao BetRiser e Prospeflix para maximizar seus lucros.'
   },
   {
-    title: 'Crescimento Ilimitado',
-    description: 'Escala conforme sua necessidade.'
+    title: 'Comunidade Ativa',
+    description: 'Mais de 5.000 membros compartilhando experiências e oportunidades.'
   }
 ]
 
 const stats = [
-  { value: '500+', label: 'Empresas' },
-  { value: '99.9%', label: 'Uptime' },
-  { value: '24/7', label: 'Suporte' },
-  { value: '150+', label: 'Países' }
+  { value: '5K+', label: 'Membros' },
+  { value: 'R$2.5K', label: 'Lucro Médio' },
+  { value: '5+', label: 'Anos de Experiência' },
+  { value: '98%', label: 'Taxa de Sucesso' }
 ]
 </script>
 

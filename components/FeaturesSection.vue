@@ -3,10 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Recursos <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Revolucionários</span>
+          Funcionalidades <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Exclusivas</span>
         </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Tecnologias de ponta que impulsionam seu negócio para o futuro
+          Ferramentas poderosas e métodos comprovados para maximizar seus lucros com 0 risco
         </p>
       </div>
 
@@ -41,34 +41,34 @@
 <script setup>
 const features = [
   {
-    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
-    title: 'Ultra Rápido',
-    description: 'Processamento em velocidade da luz com otimização de última geração.'
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    title: 'Operações com Criptomoeda',
+    description: 'Aproveite as melhores oportunidades do mercado cripto com análises automatizadas e sinais precisos.'
   },
   {
     icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-    title: '100% Seguro',
-    description: 'Criptografia militar e proteção de dados avançada.'
+    title: 'Missões Betano (0 RISCO)',
+    description: 'Complete missões exclusivas e aproveite bônus garantidos para transformar em lucro real sem risco.'
   },
   {
-    icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
-    title: 'Dashboard Inteligente',
-    description: 'Analytics em tempo real com insights poderosos.'
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    title: 'SuperOdds Exclusivas',
+    description: 'Acesso a odds superiores ao mercado através de nossa rede de parceiros e análises exclusivas.'
   },
   {
-    icon: 'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4',
-    title: 'Totalmente Configurável',
-    description: 'Adapte tudo conforme suas necessidades específicas.'
+    icon: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z',
+    title: 'Funil de Oportunidades',
+    description: 'Sistema inteligente que filtra e apresenta as melhores oportunidades de apostas em tempo real.'
   },
   {
-    icon: 'M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m9.032 4.026a9.001 9.001 0 01-7.432 0m9.032-4.026A9.001 9.001 0 0112 3c-4.474 0-8.268 3.12-9.032 7.326m0 0A9.001 9.001 0 0012 21c4.474 0 8.268-3.12 9.032-7.326',
-    title: 'API Integrada',
-    description: 'Conecte-se com qualquer sistema facilmente.'
+    icon: 'M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z',
+    title: 'Delay Esportivo com Narrador',
+    description: 'Aproveite delays em transmissões ao vivo com narração especializada para guiar suas operações.'
   },
   {
-    icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9',
-    title: 'Suporte Global',
-    description: 'Equipe especializada disponível 24/7 em múltiplos idiomas.'
+    icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+    title: 'Surebets e Promoções',
+    description: 'Software automatizado identifica oportunidades 100% seguras e as melhores promoções do mercado.'
   }
 ]
 </script>

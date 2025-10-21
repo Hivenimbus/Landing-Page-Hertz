@@ -25,26 +25,25 @@
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
           </svg>
-          Nova Tecnologia Revolucionária
+          Grupo Exclusivo - Vagas Limitadas
         </div>
 
         <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
-          <span class="block text-white mb-2">O Futuro</span>
+          <span class="block text-white mb-2">Transforme Sua</span>
           <span class="block bg-gradient-to-r from-green-400 via-emerald-400 to-green-400 bg-clip-text text-transparent">
-            Começa Agora
+            Vida Financeira
           </span>
         </h1>
 
         <p class="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Transforme suas ideias em realidade com nossa plataforma futurista.
-          <span class="text-green-400 font-semibold">Inovação</span>,
-          <span class="text-green-400 font-semibold">velocidade</span> e
-          <span class="text-green-400 font-semibold">eficiência</span> em um só lugar.
+          Alcance sua <span class="text-green-400 font-semibold">liberdade financeira</span> com métodos
+          <span class="text-green-400 font-semibold">0 risco</span>. Entre para o grupo
+          <span class="text-green-400 font-semibold">Prosperity</span> e tenha acesso a ferramentas exclusivas.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transform hover:scale-105 shadow-2xl shadow-green-500/25">
-            <span class="mr-2">Começar Gratuitamente</span>
+            <span class="mr-2">Quero Entrar para o Grupo Prosperity</span>
             <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
@@ -52,25 +51,25 @@
 
           <button class="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 border border-gray-600 rounded-full hover:border-green-400 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 backdrop-blur-sm bg-white/5">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
             </svg>
-            Ver Demonstração
+            Ver Métodos Comprovados
           </button>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
           <div class="text-center">
-            <div class="text-4xl font-bold text-green-400 mb-2">10K+</div>
-            <div class="text-gray-400">Usuários Ativos</div>
+            <div class="text-4xl font-bold text-green-400 mb-2">5K+</div>
+            <div class="text-gray-400">Membros Ativos</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-            <div class="text-gray-400">Uptime</div>
+            <div class="text-4xl font-bold text-green-400 mb-2">98%</div>
+            <div class="text-gray-400">Taxa de Sucesso</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-green-400 mb-2">24/7</div>
-            <div class="text-gray-400">Suporte</div>
+            <div class="text-4xl font-bold text-green-400 mb-2">R$2.5K</div>
+            <div class="text-gray-400">Lucro Médio Mensal</div>
           </div>
         </div>
       </div>
