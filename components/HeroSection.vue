@@ -37,13 +37,13 @@
 
         <p class="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
           Alcance sua <span class="text-green-400 font-semibold">liberdade financeira</span> com métodos
-          <span class="text-green-400 font-semibold">0 risco</span>. Entre para o grupo
+          <span class="text-green-400 font-semibold">0 risco</span>. Entre para a comunidade
           <span class="text-green-400 font-semibold">Prosperity</span> e tenha acesso a ferramentas exclusivas.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-200 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transform hover:scale-105 shadow-2xl shadow-green-500/25">
-            <span class="mr-2">Quero Entrar para o Grupo Prosperity</span>
+            <span class="mr-2">Quero Entrar para a Comunidade Prosperity</span>
             <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
             </svg>
