@@ -3,6 +3,7 @@
     <HeroSection />
     <ProgressionSection />
     <FeaturesSection />
+    <TestimonialsSection />
     <AboutSection />
     <CTASection />
   </div>
