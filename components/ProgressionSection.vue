@@ -1,15 +1,39 @@
 <template>
   <section class="relative py-32 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black">
-    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="absolute inset-0 bg-hex-pattern opacity-10"></div>
+    <div class="absolute inset-0 bg-noise opacity-5"></div>
     
     <div class="absolute inset-0">
-      <div v-for="i in 30" :key="i"
-           class="particle-glow"
+      <div v-for="i in 50" :key="i"
+           class="particle-trail"
            :style="{
              left: Math.random() * 100 + '%',
              top: Math.random() * 100 + '%',
-             animationDelay: Math.random() * 5 + 's',
-             animationDuration: (Math.random() * 3 + 2) + 's'
+             animationDelay: Math.random() * 8 + 's',
+             animationDuration: (Math.random() * 4 + 3) + 's'
+           }">
+      </div>
+    </div>
+
+    <div class="absolute inset-0">
+      <div v-for="i in 8" :key="'circuit-' + i"
+           class="circuit-line"
+           :style="{
+             top: (i * 12.5) + '%',
+             animationDelay: (i * 0.3) + 's'
+           }">
+      </div>
+    </div>
+
+    <div class="scan-radar"></div>
+
+    <div class="absolute inset-0">
+      <div v-for="i in 15" :key="'node-' + i"
+           class="tech-node"
+           :style="{
+             left: Math.random() * 100 + '%',
+             top: Math.random() * 100 + '%',
+             animationDelay: Math.random() * 3 + 's'
            }">
       </div>
     </div>
@@ -112,8 +136,10 @@
       </div>
     </div>
 
-    <div class="absolute top-1/2 left-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl transform -translate-y-1/2 animate-pulse-slow"></div>
-    <div class="absolute top-1/4 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-0 w-80 h-80 bg-green-500/15 rounded-full blur-3xl transform -translate-y-1/2 animate-pulse-slow"></div>
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 3s;"></div>
   </section>
 </template>
 
@@ -237,31 +263,182 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
 </script>
 
 <style scoped>
-.bg-grid-pattern {
-  background-image:
-    linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
+.bg-hex-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.04) 2%, transparent 0%),
+    radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.04) 2%, transparent 0%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
 }
 
-.particle-glow {
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+  animation: noise-move 8s steps(10) infinite;
+}
+
+@keyframes noise-move {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -5%); }
+  20% { transform: translate(-10%, 5%); }
+  30% { transform: translate(5%, -10%); }
+  40% { transform: translate(-5%, 15%); }
+  50% { transform: translate(-10%, 5%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 10%); }
+  80% { transform: translate(-15%, 0%); }
+  90% { transform: translate(10%, 5%); }
+}
+
+.particle-trail {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.8) 0%, transparent 70%);
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 1) 0%, transparent 70%);
   border-radius: 50%;
-  animation: float-glow ease-in-out infinite;
+  animation: float-trail ease-in-out infinite;
+  pointer-events: none;
+  box-shadow: 
+    0 0 20px rgba(16, 185, 129, 0.6),
+    0 0 40px rgba(16, 185, 129, 0.3);
+}
+
+@keyframes float-trail {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(40px, -80px) scale(1.2);
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(80px, -160px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.circuit-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0) 20%,
+    rgba(16, 185, 129, 0.4) 40%,
+    rgba(52, 211, 153, 0.6) 50%,
+    rgba(16, 185, 129, 0.4) 60%,
+    rgba(16, 185, 129, 0) 80%,
+    transparent 100%
+  );
+  animation: circuit-flow 4s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes circuit-flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.scan-radar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(16, 185, 129, 0.08) 48%,
+    rgba(52, 211, 153, 0.15) 50%,
+    rgba(16, 185, 129, 0.08) 52%,
+    transparent 100%
+  );
+  animation: radar-scan 8s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes float-glow {
+@keyframes radar-scan {
   0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.3;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.tech-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: node-pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.tech-node::before,
+.tech-node::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: node-ripple 2s ease-out infinite;
+}
+
+.tech-node::before {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tech-node::after {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  animation-delay: 0.5s;
+}
+
+@keyframes node-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
   }
   50% {
-    transform: translate(20px, -20px) scale(1.5);
-    opacity: 0.8;
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes node-ripple {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
   }
 }
 
