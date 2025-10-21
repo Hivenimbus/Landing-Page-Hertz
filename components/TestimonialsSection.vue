@@ -87,52 +87,68 @@
 const testimonials = [
   {
     id: 1,
-    name: "João Silva",
-    role: "CEO, TechCorp",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
-    text: "Transformou completamente a forma como gerenciamos nossos projetos. Os resultados foram além das expectativas!"
+    name: "Foto 1",
+    image: "/0.jpeg"
   },
   {
     id: 2,
-    name: "Maria Santos",
-    role: "Diretora de Marketing",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=600&fit=crop",
-    text: "Resultados incríveis em poucos meses. A equipe é extremamente profissional e dedicada ao nosso sucesso."
+    name: "Foto 2",
+    image: "/1.jpeg"
   },
   {
     id: 3,
-    name: "Carlos Mendes",
-    role: "Fundador, StartupXYZ",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=600&fit=crop",
-    text: "A melhor decisão que tomamos para nossa empresa. Tecnologia de ponta aliada a um suporte excepcional."
+    name: "Foto 3",
+    image: "/2.jpeg"
   },
   {
     id: 4,
-    name: "Ana Costa",
-    role: "CFO, FinanceGroup",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop",
-    text: "Retorno sobre investimento impressionante. A plataforma superou todas as nossas expectativas iniciais."
+    name: "Foto 4",
+    image: "/3.jpeg"
   },
   {
     id: 5,
-    name: "Pedro Oliveira",
-    role: "CTO, DevSolutions",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=600&fit=crop",
-    text: "Infraestrutura sólida e escalável. Perfeito para empresas que buscam crescimento rápido e sustentável."
+    name: "Foto 5",
+    image: "/4.jpeg"
   },
   {
     id: 6,
-    name: "Juliana Ferreira",
-    role: "Gerente de Produto",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=600&fit=crop",
-    text: "Interface intuitiva e recursos poderosos. Nossa equipe adotou a plataforma instantaneamente."
+    name: "Foto 6",
+    image: "/5.jpeg"
   },
   {
     id: 7,
-    name: "Ricardo Alves",
-    role: "Head de Vendas",
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=600&fit=crop",
-    text: "Aumento de 300% na produtividade. Os números falam por si mesmos!"
+    name: "Foto 7",
+    image: "/6.jpeg"
+  },
+  {
+    id: 8,
+    name: "Foto 8",
+    image: "/7.jpeg"
+  },
+  {
+    id: 9,
+    name: "Foto 9",
+    image: "/8.jpeg"
+  },
+  {
+    id: 10,
+    name: "Foto 10",
+    image: "/9.jpeg"
+  },
+  {
+    id: 11,
+    name: "Foto 11",
+    image: "/10.jpeg"
+  },
+  {
+    id: 12,
+    name: "Foto 12",
+    image: "/11.jpeg"
+  },
+  {
+    id: 13,
+    name: "Foto 13",
+    image: "/12.jpeg"
   }
 ]
 </script>
