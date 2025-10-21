@@ -420,14 +420,14 @@ export { IconSearch, IconDesign, IconCode, IconRocket, IconGrowth }
 @keyframes dotPulse {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: scale(0.5);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
   }
 }
 
