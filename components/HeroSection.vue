@@ -4,6 +4,17 @@
       <div class="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent"></div>
     </div>
 
+    <div class="video-container hidden lg:block">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        class="video-player">
+        <source src="/Hertz brilho.mp4" type="video/mp4">
+      </video>
+    </div>
+
     <div class="absolute inset-0">
       <div class="particles-container">
         <div v-for="i in 50" :key="i"
@@ -140,6 +151,33 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.video-container {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 360px;
+  height: 640px;
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1280px) {
+  .video-container {
+    width: 280px;
+    height: 498px;
+    left: 3%;
   }
 }
 </style>
